@@ -1,0 +1,12 @@
+.about{
+    /* background-color: var(--back); */
+    padding:var(--padding-top) 0;
+}
+
+.about .container .aboutP{
+    text-align: center;
+    color: #333;
+    line-height: 1.8;
+    padding: var(--padding-top);
+    font-size:1.1em;
+}

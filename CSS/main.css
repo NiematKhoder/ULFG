@@ -1,0 +1,244 @@
+:root{
+    --mian-color:#3162a4;
+    --yellow:#eeaf16;
+    --light:#e8eaf6;
+    --padding-top: 20px;
+    --back: #eee;
+    --gray:#d9d9d9;
+}
+/* start global styling */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "PT Serif";
+    margin: 0;
+}
+h2,h3{
+    margin:0;
+    text-align: center;
+    color: var(--mian-color);
+}
+.special-heading{
+    letter-spacing: 20px !important;
+    font-weight: 800 !important;
+    font-size: 2em !important;
+    background-color:white !important;
+}
+@media (max-width:767px){
+    .special-heading{
+        letter-spacing: 10px !important;
+        font-weight: 800 !important;
+        font-size: 2em !important;
+    }
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+ 
+}
+/* small */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* end global styling */
+
+/* start navbar */
+nav{
+    padding:5px 0;
+    background-color: var(--light);
+    position:sticky;
+    top:0;
+}
+nav .container{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo img{
+    width: 70px;
+   
+}
+
+@media(max-width:767px){
+    nav .container .logo img{
+        width: 50px;
+    }
+} 
+
+nav .container .links ul{
+    list-style: none;
+    display: flex;
+}
+nav .container .links ul li{
+    margin: 0 12px;
+}
+.container  a{
+    text-decoration: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--mian-color);
+}
+
+/* phone style */
+nav .icon{
+    width:30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+}
+
+/* small */
+@media (min-width:768px){
+    nav .icon{
+        display: none;
+    }
+}
+
+/* medium */
+@media (min-width: 992px){
+    nav .icon{
+        display: none;
+    }
+}
+
+/* large */
+@media (min-width:1200px){
+    nav .icon{
+        display: none;
+    }
+}
+nav .icon span{
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+    width:100%;
+}
+@media (max-width:767px){
+    nav .container{
+        position:relative;
+    }
+    nav .container .links{
+        display: none;
+        transition: 0.3s;
+        position:absolute;
+        background-color: var(--mian-color);
+        right: 5px;
+        top: 41px;
+        padding:0;
+        border-radius: 25px;
+    }
+
+    nav .container .links ul{
+        display: flex;
+        flex-direction: column;
+       
+        margin:0;
+        padding:0;
+    } 
+    nav .container .links ul li{
+        padding: 10px 10px;
+        border-bottom:1px solid #333;
+        margin:0;
+    }
+    nav .container .links ul li a{
+        color:var(--light);
+    }
+    nav .container .links ul li:hover{
+       /* background-color: pink; */
+       
+       font-weight: bold;
+       animation-name:change-color;
+       animation-duration: 2s;
+       animation-iteration-count: infinite;
+       border-radius: 25px;
+    }
+    @keyframes change-color {
+        0%{
+            background-color: var(--yellow);
+           
+        }
+        50%{
+            background-color: var(--mian-color);
+    }
+   100%{
+    background-color: var(--yellow);
+   }
+}
+    nav .container .links ul li:last-child{
+        border:0;
+    }
+    #ic:hover + #linket  {
+      display:block;
+    }
+    #linket:hover{
+        display:block;
+    }
+  
+
+}
+/* phone style */
+/* end navbar */
+/* sart home */
+.home{
+    background-image: url(../Images/48909557_401650427275629_3694218550882336768_n.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:calc(100vh - 84.6px);
+    display:flex;
+    justify-content: center;
+}
+.home .intro{
+    padding-top: 60px;
+}
+.home  h1, .home  h2{
+    display:block;
+    margin:0;
+    color:var(--light);
+    text-align: center;
+    font-weight: 800;
+}
+@media(max-width:767px){
+.home{
+    height:calc(100vh - 64.6px);
+    
+}
+.home .intro{
+    padding-top: 80px;
+}
+.home  h1, .home  h2{
+    font-weight: 400;
+}
+}
+
+
+/* sart home */

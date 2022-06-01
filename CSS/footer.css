@@ -1,0 +1,27 @@
+footer{
+    background-color: var(--mian-color);
+    margin-top:10px;
+}
+footer .container{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+footer .container .contact, .cpyRight{
+    margin:5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container  a{
+    color:var(--light) !important;
+    padding-left: 20px;
+}
+.cpyRight{
+    color:var(--gray);
+    font-weight: 500;
+}
+.cpyRight span{
+    color:var(--yellow);
+    font-weight: 600;
+    font-size: 1.2em;
+}

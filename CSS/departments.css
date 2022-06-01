@@ -1,0 +1,189 @@
+.departments{
+    padding: var(--padding-top) 0;
+   
+}
+
+.departments .container{
+    padding-top: var(--padding-top);
+    display:grid;
+}
+.departments .container .common-trunc , .departments .container .thirdyear{
+    padding-top: var(--padding-top);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); */
+
+}
+
+.departments .container .common-trunc .year12{
+    
+    grid-column: 6/8;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mian-color);
+    
+}
+
+.departments .container .common-trunc .year1{
+    grid-column: 1/6;
+    
+}
+
+.departments .container .common-trunc .year2{
+    grid-column: 8/13;
+    
+}
+
+.departments .container  h2{
+   color: var(--yellow);
+   font-family: sans-serif;
+   letter-spacing: -1px;
+   font-size: 1.6em;
+}
+.departments .container  h3{
+    vertical-align: center; 
+    padding-top:10px;
+    font-weight: 400;
+    background-color: var(--mian-color);
+    color:var(--yellow);
+}
+.departments .container .face{
+    position:relative;
+    transform-style:preserve-3d;
+    transition: transform 0.5s;
+    height:560px;
+} 
+.face .front , .face .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+ .year1 .face:hover, 
+ .year2 .face:hover,
+  .civil .face:hover,
+   .elec .face:hover ,
+    .meca .face:hover ,
+     .petro .face:hover{
+   transform:rotateY(-180deg);
+   overflow: visible;
+}
+/* .departments .container .common-trunc .year2 .face:hover{
+    transform:rotateY(-180deg);
+    overflow: visible;
+ } */
+.departments .container .back{
+    transform:rotateY(180deg);
+}
+.departments .container   ul{
+   list-style: none;
+   padding:10px;
+   background-color: var(--light);
+}
+.departments .container   ul li:first-child{
+   background-color: #a7c5ec;
+   text-align: center;
+   
+ }
+.departments .container   ul li:not(:last-child){
+    border-bottom:1px solid var(--yellow);
+ }
+.departments .container  ul li{
+    padding: 10px;
+    color:var(--mian-color);
+    background-color: var(--light);
+}
+
+/* Start other departments */
+.departments .container .civil{
+    grid-column: 1/6;
+}
+.gap{
+    grid-column: 6/8;
+    background-color: var(--mian-color);
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+ .year{
+    align-items: flex-start !important;
+}
+
+.departments .container .elec{
+    grid-column: 8/13;
+}
+.departments .container .meca{
+    grid-column: 1/6;
+}
+.departments .container .petro{
+    grid-column: 8/13;
+}
+
+/* end other departments */
+
+/* start curriculum */
+.container .curriculum{
+    padding-top: var(--padding-top);
+    display: grid;
+    gap:10px;
+     grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); 
+}
+.container h2{
+    background-color: var(--mian-color);
+    padding:10px 0;
+    
+}
+.container .curriculum div{
+   
+    background-color: var(--light);
+}
+.container .curriculum div p{
+   padding:10px 0;
+    text-align: center;
+    line-height: 1.6;
+}
+.container  .more{
+    padding:10px;
+    margin:20px auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(133deg,  var(--yellow), var(--mian-color));
+
+}
+.container  .more:hover {
+    background: linear-gradient(-133deg,  var(--yellow), var(--mian-color));
+  }
+.container  .more a{
+    font-size: 1em;
+    color: var(--back) !important;
+}
+.departments i{
+    position:absolute;
+    right:20px;
+    
+}
+/* start curriculum */
+@media(max-width:767px){
+    .departments .container .common-trunc,.departments .container .thirdyear{
+        display:block;
+    }
+    .departments .container .common-trunc .year12{
+        margin: 10px 0 ;
+        padding:10px;
+    }
+    .departments .container .common-trunc  ul{
+        padding:0;
+    }
+    .gap h2,.year{
+        display:none;
+    }
+   
+}
